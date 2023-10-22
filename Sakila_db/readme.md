@@ -6,6 +6,6 @@ My project was practiced by SQLite
 ![sakila](https://github.com/BambiPK/mydata_portfolio/assets/141467571/9049fa0e-b797-48e3-8411-11d277a1f110)
 
   Basic wildcard
-  ```
+  ```sql
 SELECT * from actor
 	where first_name like 'P%';
