@@ -9,3 +9,19 @@ My project was practiced by SQLite
   ```sql
 SELECT * from actor
 	where first_name like 'P%';
+ ```
+
+actor_id | first_name | last_name |last_update|
+--- | --- | --- |--- |
+1   |PENELOPE	|GUINESS	|4/11/2019 18:11
+46  |PARKER	|GOLDBERG	|4/11/2019 18:11
+54  |PENELOPE	|PINKETT	|4/11/2019 18:11
+104 |PENELOPE	|CRONYN	|4/11/2019 18:11
+120 |PENELOPE	|MONROE	|4/11/2019 18:11
+
+
+
+
+
+
+
