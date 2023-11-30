@@ -6,3 +6,8 @@ Level: Easy
 Because I like Japan So much, So I took Japan Visitor Dataset from Kaggle.
 
 ## Function method I use in this project :arrow_down:
+- WHERE
+- GROUP BY
+- AGGREGATE FUNCTION
+- WINDOWS FUNCTION (OVER (ORDER BY..)
+- SUBQUERIES
