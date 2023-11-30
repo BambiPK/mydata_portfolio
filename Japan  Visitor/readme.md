@@ -11,3 +11,6 @@ Because I like Japan So much, So I took Japan Visitor Dataset from Kaggle.
 - AGGREGATE FUNCTION
 - WINDOWS FUNCTION (OVER (ORDER BY..)
 - SUBQUERIES
+
+Simple dashboard from this data set
+Follow link >> https://public.tableau.com/app/profile/pornpailin.krudsupat/viz/JapanVisitors/Dashboard1?publish=yes
