@@ -7,3 +7,5 @@ These are very good to pratice and understand business process.
 Following picture is schema I made from PowerBI
 
 ![image](https://github.com/BambiPK/mydata_portfolio/assets/141467571/ccac90cb-16e8-439d-9ee5-81df3367173e)
+
+## 1st Section; Basic Syntax to solve the questions.
