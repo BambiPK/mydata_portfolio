@@ -10,7 +10,17 @@ Following picture is schema I made from PowerBI
 
 -- There are 11 tables in this database --
 ## 1st Section; Basic Syntax to solve the questions.
-**1.1 How many customers in each country of this business**
+
+**1.1 How many customers in northwind business?
+```sql
+SELECT count(customerid) as TTL_Cust
+from Customers;
+```
++ There are 93 customers from result set.
+
+
+
+**1.2 How many customers in each country of this business**
 ```sql
 SELECT 
 	country,
