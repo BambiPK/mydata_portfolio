@@ -8,4 +8,16 @@ Following picture is schema I made from PowerBI
 
 ![image](https://github.com/BambiPK/mydata_portfolio/assets/141467571/ccac90cb-16e8-439d-9ee5-81df3367173e)
 
+-- There are 11 tables in this database --
 ## 1st Section; Basic Syntax to solve the questions.
+**1.1 How many customers in each country of this business**
+```sql
+SELECT 
+	country,
+	COUNT(*) AS Customer_N
+  	FROM customers
+    WHERE country IS NOT NULL
+	GROUP BY country
+    ORDER BY Customer_N desc;
+```
+>> ![image](https://github.com/BambiPK/mydata_portfolio/assets/141467571/631b78de-192f-428f-94a3-37f9640de339)
