@@ -47,6 +47,8 @@ from Categories as Cat
 join Products as P on Cat.CategoryID = P.CategoryID
 group by categoryname;
 ```
+Result set ⬇️
+
 |CategoryName	|PQty	|Cat_rate|
 |---|---|---|
 |Beverages	|12	|15.58|
