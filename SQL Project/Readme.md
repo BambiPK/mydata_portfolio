@@ -111,7 +111,7 @@ GROUP by categoryid
 order by Total_Sales desc
 limit 5;
 ```
-Result set⬇️
+Result set ⬇️
 |CategoryID	|categoryname	|Total_Sales  |
 |---       |---            |---          |
 1	   |Beverages	        |31,781,701.00|
@@ -119,6 +119,31 @@ Result set⬇️
 6	   |Meat/Poultry	|22,087,971.01|
 4	   |Dairy Products	|19,611,683.10|
 2	   |Condiments	        |19,103,247.10|
+
+**2.4 Find the top 5 employees who have the best sales in the latest 3 years and what is their title/position**
+```sql
+SELECT
+    Employees.employeeid,
+    firstname || ' ' || lastname as EmployeeName,
+    title,
+	SUM(ROUND((unitprice * quantity) - (unitprice * quantity * discount),2)) as SalesPrice
+from OrderDetails
+JOIN Orders on OrderDetails.OrderID = Orders.OrderID
+join Employees on Orders.EmployeeID = Employees.EmployeeID
+WHERE orderdate >= '2020-01-01' AND orderdate <= '2023-12-31'
+GROUP by 2
+Order by SalesPrice DESC
+limit 5;
+```
+Result set ⬇️ Most of employee from top 5 is Sale representative
+
+|EmployeeID	|EmployeeName	        |Title	                 |SalesPrice   |
+|---            |---                    |---                     |---          |
+|7	        |Robert King	        |Sales Representative	 |18,166,536.22|
+|4	        |Margaret Peacock	|Sales Representative	 |18,037,712.02|
+|5	        |Steven Buchanan	|Sales Manager	         |17,587,355.71|
+|9	        |Anne Dodsworth	        |Sales Representative	 |17,057,404.97|
+|3	        |Janet Leverling	|Sales Representative	 |16,943,465.62| 
 
 
 
