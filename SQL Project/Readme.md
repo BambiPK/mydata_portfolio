@@ -11,7 +11,8 @@ Following picture is schema I made from PowerBI
 -- There are 11 tables in this database --
 ## 1st Section; Basic Syntax to solve the questions.
 
-**1.1 How many customers in northwind business?
+**1.1 How many customers in northwind business?**
+
 ```sql
 SELECT count(customerid) as TTL_Cust
 from Customers;
@@ -21,6 +22,7 @@ from Customers;
 
 
 **1.2 How many customers in each country of this business**
+
 ```sql
 SELECT 
 	country,
@@ -31,3 +33,29 @@ SELECT
     ORDER BY Customer_N desc;
 ```
 >> ![image](https://github.com/BambiPK/mydata_portfolio/assets/141467571/631b78de-192f-428f-94a3-37f9640de339)
+
+## 2nd Intermediate Function to solve the business questions.
+**2.1 Ratio of Category of product**
+
+```sql
+SELECT
+    Cat.CategoryName,
+    count(P.ProductID) as PQty,
+    ROUND((COUNT(P.ProductID) * 100.0 / (SELECT COUNT(*) from Products)),2) as Cat_rate
+    
+from Categories as Cat
+join Products as P on Cat.CategoryID = P.CategoryID
+group by categoryname;
+```
+|CategoryName	|PQty	|Cat_rate|
+|---|---|---|
+|Beverages	|12	|15.58|
+|Condiments	|12	|15.58|
+|Confections	|13	|16.88|
+|Dairy Products	|10	|12.99|
+|Grains/Cereals	|7	|9.09|
+|Meat/Poultry	|6	|7.79|
+|Produce	|5	|6.49|
+|Seafood	|12	|15.58|
+
+
